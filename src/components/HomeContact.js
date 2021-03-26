@@ -17,13 +17,13 @@ const HomeContact = () => {
 
             <div
                 className="home-contact-section"
-                style={{backgroundImage:`url(${BackgroundImage})`, backgroundSize: "cover"}}
+                style={{backgroundImage:`url(${BackgroundImage})`, backgroundSize: "cover", opacity:0.4}}
             >
             <div
                 className="columns"
             >
-                <div className="column is-three-fifths"></div>
-                <div className="column is-two-fifths">
+                <div className="column is-half"></div>
+                <div className="column is-two-fifths is-half">
                     <StyledHeader nameFirstHalf="Skontaktuj się z nami" nameSecondHalf=""/>
                     <form>
                         <div className="is-flex">

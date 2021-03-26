@@ -41,46 +41,6 @@
 .home-header-text-buttons-text{
   font-size: 3rem;
   text-align: center;
-
   //justify-self: center;
   //align-self: center;
-}
-.home-header-buttons-box{
-  //display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.fancy-selector{
-  display: flex;
-  justify-self: center;
-  align-self: center;
-}
-.uppercase-button {
-  font-family: $font-base;
-  font-weight: 200;
-  font-size: 1.5rem;
-  text-align: center;
-  margin: 1rem;
-  background-color: white;
-  border: 1px solid black;
-  text-transform: uppercase;
-  flex: 2;
-
-
-
-  &:hover {
-    background-color: #baeaf8;
-    border: 1px solid black;
-  }
-
-}
-  .no-margin{
-  margin-bottom: 0;
-}
-
-.hidden{
-  display: none;
-}
-.styled-header{
-  padding: 4rem 0;
 }
