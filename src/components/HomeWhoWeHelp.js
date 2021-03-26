@@ -1,0 +1,142 @@
+import React from 'react';
+import Decoration from "../assets/Decoration.svg";
+import {BrowserRouter as Router, Link, Route, Switch} from "react-router-dom";
+//
+const HomeWhoWeHelpTableRow = (props) => {
+    return(
+        <div className="home-who-we-help-choice">
+            <div className="home-who-we-help-choice-left">
+                <h5 className="home-who-we-help-choice-title">{props.name}</h5>
+                <p className="home-who-we-help-choice-paragraph">{props.goal}</p>
+            </div>
+            <p className="home-who-we-help-choice-paragraph-light">{props.stuff}</p>
+        </div>
+    )
+}
+const Foundations = ()=>{
+    return(
+        <div className="container home-who-we-help">
+            <div className="is-one-third">
+                <p className="has-text-centered home-who-we-help-paragraph">W naszej bazie znajdziesz listę zweryfikowanych Fundacji, z którymi współpracujemy. Możesz sprawdzić czym się zajmują, komu pomagają i czego potrzebują.</p>
+                <div className="column home-who-we-help-choices-box">
+                    <HomeWhoWeHelpTableRow
+                        name={"Fundacja “Dbam o Zdrowie”"}
+                        goal="Cel i misja: Pomoc osobom znajdującym się w trudnej sytuacji życiowej."
+                        stuff="ubrania, jedzenie, sprzęt AGD, meble, zabawki"
+                    />
+                    <HomeWhoWeHelpTableRow
+                        name={"Fundacja “Dla dzieci”"}
+                        goal="Cel i misja: Pomoc dzieciom z ubogich rodzin."
+                        stuff="ubrania, meble, zabawki"
+                    />
+                    <HomeWhoWeHelpTableRow
+                        name={"Fundacja “Bez domu”"}
+                        goal="Cel i misja: Pomoc dla osób nie posiadających miejsca zamieszkania."
+                        stuff="ubrania, jedzenie, ciepłe koce"
+                    />
+                </div>
+                <div className="home-who-we-help-buttons-box">
+                    <button className="home-who-we-help-number-button">1</button>
+                    <button className="home-who-we-help-number-button">2</button>
+                    <button className="home-who-we-help-number-button">3</button>
+                </div>
+            </div>
+        </div>
+    )
+}
+const Organizations = ()=>{
+    return(
+        <div className="container home-who-we-help">
+            <div className="is-one-third">
+                <p className="has-text-centered home-who-we-help-paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
+                <div className="column home-who-we-help-choices-box">
+                    <HomeWhoWeHelpTableRow
+                        name={"Organizacja “Dbam o Zdrowie”"}
+                        goal="Cel i misja: Pomoc osobom znajdującym się w trudnej sytuacji życiowej."
+                        stuff="ubrania, jedzenie, sprzęt AGD, meble, zabawki"
+                    />
+                    <HomeWhoWeHelpTableRow
+                        name={"Organizacja “Dla dzieci”"}
+                        goal="Cel i misja: Pomoc dzieciom z ubogich rodzin."
+                        stuff="ubrania, meble, zabawki"
+                    />
+                    <HomeWhoWeHelpTableRow
+                        name={"Organizacja “Bez domu”"}
+                        goal="Cel i misja: Pomoc dla osób nie posiadających miejsca zamieszkania."
+                        stuff="ubrania, jedzenie, ciepłe koce"
+                    />
+                </div>
+                <div className="home-who-we-help-buttons-box">
+                    <button className="home-who-we-help-number-button">1</button>
+                    <button className="home-who-we-help-number-button">2</button>
+                    <button className="home-who-we-help-number-button">3</button>
+                </div>
+            </div>
+        </div>
+    )
+}
+const Local = ()=>{
+    return(
+        <div className="container home-who-we-help">
+            <div className="is-one-third">
+                <p className="has-text-centered home-who-we-help-paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
+                <div className="column home-who-we-help-choices-box">
+                    <HomeWhoWeHelpTableRow
+                        name={"Zbiórka “Lorem Ipsum 1”"}
+                        goal="Quis varius quam quisque id diam vel quam elementum pulvinar."
+                        stuff="Egestas, sed, tempus"
+                    />
+                    <HomeWhoWeHelpTableRow
+                        name={"Zbiórka “Lorem Ipsum 2”"}
+                        goal="Hendrerit gravida rutrum quisque non tellus orci ac auctor augue."
+                        stuff="Ut, aliquam, purus, sit, amet"
+                    />
+                    <HomeWhoWeHelpTableRow
+                        name={"Zbiórka “Lorem Ipsum 3”"}
+                        goal="Scelerisque in dictum non consectetur a erat nam."
+                        stuff="Mi, quis, hendrerit, dolor"
+                    />
+                </div>
+                <div className="home-who-we-help-buttons-box">
+                    <button className="home-who-we-help-number-button">1</button>
+                    <button className="home-who-we-help-number-button">2</button>
+                    <button className="home-who-we-help-number-button">3</button>
+                </div>
+            </div>
+        </div>
+    )
+}
+const HomeWhoWeHelp = () => {
+    return (<>
+        <Router>
+        <div className="container home-who-we-help">
+            <div className="is-one-third">
+            <div className="home-simple-steps-header">
+                <h3 className="home-header-text-buttons-text">Komu pomagamy?</h3>
+                <img src={Decoration}/>
+            </div>
+                <div className="home-who-we-help-buttons-box">
+                    <Link to="/foundations"><button className="home-who-we-help-button">Fundacjom</button></Link>
+                    <Link to="/organizations"><button className="home-who-we-help-button">Organizacjom<br/>pozarządowym</button></Link>
+                    <Link to="/local"><button className="home-who-we-help-button">Lokalnym<br/>zbiórkom</button></Link>
+                </div>
+                <div>
+                    <Switch>
+                        <Route exact path="/foundations">
+                    <Foundations/>
+                        </Route>
+                        <Route exact path="/organizations">
+                    <Organizations/>
+                        </Route>
+                        <Route exact path="/local">
+                    <Local/>
+                        </Route>
+                    </Switch>
+                </div>
+            </div>
+        </div>
+        </Router>
+        </>
+    );
+};
+export default HomeWhoWeHelp;

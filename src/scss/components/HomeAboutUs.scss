@@ -1,0 +1,41 @@
+.home-about-us-section{
+  background-color: #F0F1F1;
+  display: grid;
+  place-content: center;
+  text-align: center;
+  padding: 8rem 0 10rem 0;
+
+}
+.home-about-us-photo-container{
+  background-image: url("People@2x.png");
+  background-size: cover;
+  background-position: left;
+  min-height: 200px;
+}
+.home-about-us-section-box{
+  margin: 0 8rem 0 8rem;
+  padding-bottom: 6rem;
+  position: relative;
+}
+.home-about-us-section-box-header{
+  font-size: 2.2rem;
+  padding-bottom: 0.8rem;
+}
+.home-about-us-section-box-paragraph{
+  font-size: 1.8rem;
+  line-height: 3.5rem;
+  padding-top: 1rem;
+}
+.signature{
+  display: block;
+  background-image: url("Signature.svg");
+  background-size: cover;
+  height: 90px;
+  width: 140px;
+  background-repeat: no-repeat;
+  position: absolute;
+  //top:350px;
+  //left:500px;
+  bottom: 0;
+  right: 0;
+}

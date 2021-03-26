@@ -4,7 +4,19 @@ import ShirtIcon from "../assets/Icon-1@2x.png"
 import BagIcon from "../assets/Icon-2@2x.png"
 import SearchIcon from "../assets/Icon-3@2x.png"
 import ReuseIcon from "../assets/Icon-4@2x.png"
+import UppercaseButton from "./elements/AllButtons";
 
+
+const SimpleStep = (props)=>{
+    return(
+        <div className="column home-simple-steps-box">
+        <img className="home-simple-steps-box-icon" src={props.image}/>
+        <h4 className="home-simple-steps-box-header">{props.titleFirstPart}<br/>{props.titleSecondPart}</h4>
+        <span className="separator"></span>
+        <p className="home-simple-steps-box-text">{props.paragraphFirstPart}<br/>{props.paragraphSecondPart}</p>
+        </div>
+    )
+}
 const HomeSimpleSteps = () => {
     return (
         <div>
@@ -14,36 +26,35 @@ const HomeSimpleSteps = () => {
             </div>
             <div className="home-simple-steps-grey-section is-flex is-justify-content-center">
                 <div className="container columns">
-                    <div className="column home-simple-steps-box">
-                        <img className="home-simple-steps-box-icon" src={ShirtIcon}/>
-                        <h4 className="home-simple-steps-box-header">Wybierz rzeczy</h4>
-                        <span className="separator"></span>
-                        <p className="home-simple-steps-box-text">ubrania, zabawki,<br/>sprzęt i inne</p>
-                    </div>
-                    <div className="column home-simple-steps-box">
-                        <img className="home-simple-steps-box-icon" src={BagIcon}/>
-                        <h4 className="home-simple-steps-box-header">Spakuj je</h4>
-                        <span className="separator"></span>
-                        <p className="home-simple-steps-box-text">skorzystaj z<br/>sworków na śmieci</p>
-                    </div>
-                    <div className="column home-simple-steps-box">
-                        <img className="home-simple-steps-box-icon" src={SearchIcon}/>
-                        <h4 className="home-simple-steps-box-header">Zadecyduj komu<br/>chcesz pomóc</h4>
-                        <span className="separator"></span>
-                        <p className="home-simple-steps-box-text">wybierz zaufane<br/>smiejsce</p>
-                    </div>
-                    <div className="column home-simple-steps-box">
-                        <img className="home-simple-steps-box-icon" src={ReuseIcon}/>
-                        <h4 className="home-simple-steps-box-header">Zamów kuriera</h4>
-                        <span className="separator"></span>
-                        <p className="home-simple-steps-box-text">kurier przyjedzie<br/>w dogodnym terminie</p>
-                    </div>
+                    <SimpleStep
+                        image={ShirtIcon}
+                        titleFirstPart="Wybierz rzeczy"
+                        titleSecondPart=""
+                        paragraphFirstPart="ubrania, zabawki"
+                        paragraphSecondPart="sprzęt i inne"/>
+                    <SimpleStep
+                        image={BagIcon}
+                        titleFirstPart="Spakuj je"
+                        titleSecondPart=""
+                        paragraphFirstPart="skorzystaj z"
+                        paragraphSecondPart="worków na śmieci"/>
+                    <SimpleStep
+                        image={SearchIcon}
+                        titleFirstPart="Zadecyduj komu"
+                        titleSecondPart="chcesz pomóc"
+                        paragraphFirstPart="wybierz zaufane"
+                        paragraphSecondPart="miejsce"/>
+                    <SimpleStep
+                        image={ReuseIcon}
+                        titleFirstPart="Zamów kuriera"
+                        titleSecondPart=""
+                        paragraphFirstPart="kurier przyjedzie"
+                        paragraphSecondPart="w dogodnym terminie"/>
                 </div>
             </div>
             <div className="home-simple-steps-button-container">
-                <button className="uppercase-button home-simple-steps-button">Oddaj<br/>rzeczy</button>
+                <UppercaseButton class="home-simple-steps-button" nameFirstPart="Oddaj" nameSecondPart="rzeczy"/>
             </div>
-
         </div>
     );
 };

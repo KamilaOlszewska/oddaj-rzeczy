@@ -1,18 +1,21 @@
 import React from 'react';
 import Decoration from "../assets/Decoration.svg"
-// import HeaderBackground from "../assets/HeroImage.png"
+import HeaderBackground from "../assets/HeroImage.png"
+import UppercaseButton from "./elements/AllButtons";
+
 const HomeHeader = () => {
     return (
-        <div className=" columns">
-            <div className="home-header-banner column is-half"></div>
-
-            <div className="column is-half is-flex is-flex-direction-column home-header-content  ">
+        <div className="columns no-margin mb-0 mt-0">
+            <div
+                className="home-header-banner column is-half"
+                 style={{backgroundImage:`url(${HeaderBackground})`}}
+            />
+            <div className="column is-half is-flex is-flex-direction-column home-header-content">
                 <div className="is-flex is-flex-direction-column home-header-nav-bar">
                 <div className="is-flex is-align-self-flex-end home-header-nav-login">
                     <p className="home-header-nav-bar-element">Zaloguj</p>
                     <p className="home-header-nav-bar-element">Załóż konto</p>
                 </div>
-
                 <ul className="is-flex home-header-nav-menu">
                     <li className="home-header-nav-menu-element">Start</li>
                     <li className="home-header-nav-menu-element">O co chodzi?</li>
@@ -31,8 +34,8 @@ const HomeHeader = () => {
                     <img  className="fancy-selector" src={Decoration}/>
                 </div>
                 <div className="is-flex columns has-text-centered home-header-buttons-box">
-                    <button className="uppercase-button is-half column">Oddaj<br/>rzeczy</button>
-                    <button className="uppercase-button is-half column">Zorganizuj<br/>zbiórkę</button>
+                    <UppercaseButton class="column is-half" nameFirstPart="Oddaj" nameSecondPart="rzeczy"/>
+                    <UppercaseButton class="column is-half" nameFirstPart="Zorganizuj" nameSecondPart="zbiórkę"/>
                 </div>
             </div>
             </div>

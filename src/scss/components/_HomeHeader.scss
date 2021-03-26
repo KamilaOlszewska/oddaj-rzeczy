@@ -2,7 +2,7 @@
   height: 100vh;
   background-size: cover;
   background-position: right;
-  background-image: url("HeroImage@2x.png");
+  //background-image: url("../../assets/HeroImage.png");
 }
 .home-header-nav-bar{
   height: 150px;
@@ -14,7 +14,6 @@
   height: calc(100vh - 150px);
   align-items: center;
   justify-content: center;
-
 }
 .home-header-nav-menu{
   padding: 0.8rem 1rem;
@@ -56,7 +55,7 @@
   justify-self: center;
   align-self: center;
 }
-.uppercase-button{
+.uppercase-button {
   font-family: $font-base;
   font-weight: 200;
   font-size: 1.5rem;
@@ -66,8 +65,17 @@
   border: 1px solid black;
   text-transform: uppercase;
   flex: 2;
-  &:hover{
+
+
+
+  &:hover {
     background-color: #baeaf8;
     border: 1px solid black;
   }
+
 }
+  .no-margin{
+  margin-bottom: 0;
+}
+
+
