@@ -1,7 +1,7 @@
 import React from 'react';
-import Decoration from "../assets/Decoration.svg";
 import {BrowserRouter as Router, Link, Route, Switch} from "react-router-dom";
-//
+import StyledHeader from "./elements/StyledHeader";
+
 const HomeWhoWeHelpTableRow = (props) => {
     return(
         <div className="home-who-we-help-choice">
@@ -111,18 +111,15 @@ const HomeWhoWeHelp = () => {
         <Router>
         <div className="container home-who-we-help">
             <div className="is-one-third">
-            <div className="home-simple-steps-header">
-                <h3 className="home-header-text-buttons-text">Komu pomagamy?</h3>
-                <img src={Decoration}/>
-            </div>
+                <StyledHeader nameFirstHalf="Komu pomagamy?" nameSecondHalf=""/>
                 <div className="home-who-we-help-buttons-box">
-                    <Link to="/foundations"><button className="home-who-we-help-button">Fundacjom</button></Link>
+                    <Link to="/"><button className="home-who-we-help-button">Fundacjom</button></Link>
                     <Link to="/organizations"><button className="home-who-we-help-button">Organizacjom<br/>pozarządowym</button></Link>
                     <Link to="/local"><button className="home-who-we-help-button">Lokalnym<br/>zbiórkom</button></Link>
                 </div>
                 <div>
                     <Switch>
-                        <Route exact path="/foundations">
+                        <Route exact path="/">
                     <Foundations/>
                         </Route>
                         <Route exact path="/organizations">

@@ -1,6 +1,7 @@
 import React from 'react';
 import BackgroundImage from "../assets/BackgroundImage@2x.png";
 import Decoration from "../assets/Decoration.svg";
+import StyledHeader from "./elements/StyledHeader";
 
 
 const Button = (props)=>{
@@ -12,36 +13,52 @@ const Button = (props)=>{
 }
 
 const HomeContact = () => {
-    const dupa = "Wpisz swoje imię debilu";
     return (
+
             <div
-                className="home-contact-section columns"
-                style={{backgroundImage:`url(${BackgroundImage})`}}
+                className="home-contact-section"
+                style={{backgroundImage:`url(${BackgroundImage})`, backgroundSize: "cover"}}
+            >
+            <div
+                className="columns"
             >
                 <div className="column is-three-fifths"></div>
                 <div className="column is-two-fifths">
-                    <div className="is-flex is-flex-direction-column is-justify-content-center">
-                        <h3 className="home-header-text-buttons-text">
-                            Skontaktuj się z nami
-                        </h3>
-                        <img  className="fancy-selector" src={Decoration}/>
-                    </div>
+                    <StyledHeader nameFirstHalf="Skontaktuj się z nami" nameSecondHalf=""/>
                     <form>
-                        <div>
-                        <div>
-                        <label>Wpisz swoje imię</label>
+                        <div className="is-flex">
+                            <div className="is-flex is-flex-direction-column">
+                            <label>Wpisz swoje imię</label>
                             <input/>
-                        </div>
-                        <div>
+                            </div>
+                            <div className="is-flex is-flex-direction-column">
                             <label>Wpisz swój email</label>
                             <input/>
+                            </div>
                         </div>
-                        </div>
+                        <div className="is-flex is-flex-direction-column">
                         <label>Wpisz swoją wiadomość</label>
+                        <input type="text"/>
+                        </div>
+                        <button>Wyślij</button>
                     </form>
 
                 </div>
+
             </div>
+                <div className="columns">
+                <div className="column is-flex is-justify-content-space-between">
+                    <h1>.</h1>
+                    <h1>Copyright by CodersLab</h1>
+                    <h1>
+                        <i className="fab fa-facebook-square"></i>
+                        <i className="fab fa-instagram-square"></i>
+                    </h1>
+
+                </div>
+                </div>
+        </div>
+
     );
 };
 

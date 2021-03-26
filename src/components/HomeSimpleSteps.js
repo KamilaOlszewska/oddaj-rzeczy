@@ -4,7 +4,8 @@ import ShirtIcon from "../assets/Icon-1@2x.png"
 import BagIcon from "../assets/Icon-2@2x.png"
 import SearchIcon from "../assets/Icon-3@2x.png"
 import ReuseIcon from "../assets/Icon-4@2x.png"
-import UppercaseButton from "./elements/AllButtons";
+import UppercaseButton from "./elements/UppercaseButton";
+import StyledHeader from "./elements/StyledHeader";
 
 
 const SimpleStep = (props)=>{
@@ -20,10 +21,7 @@ const SimpleStep = (props)=>{
 const HomeSimpleSteps = () => {
     return (
         <div>
-            <div className="home-simple-steps-header">
-                <h3 className="home-header-text-buttons-text">Wystarczą 4 proste kroki</h3>
-                <img src={Decoration}/>
-            </div>
+            <StyledHeader nameFirstHalf="Wystarczą 4 proste kroki" nameSecondHalf=""/>
             <div className="home-simple-steps-grey-section is-flex is-justify-content-center">
                 <div className="container columns">
                     <SimpleStep
