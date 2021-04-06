@@ -3,38 +3,9 @@ import HeaderBackground from "../assets/HeroImage.png"
 import UppercaseButton from "./elements/UppercaseButton";
 import {BrowserRouter as Router, Link, Route, Switch} from "react-router-dom";
 import StyledHeader from "./elements/StyledHeader";
-const HomeLogin = ()=>{
-    return(
-        <div>
-            <h3>bla</h3>
-            <form>
-                <label>E-mail</label>
-                <input type="email"/>
-                <label>Hasło</label>
-                <input type="password"/>
-                <label>Powtórz hasło</label>
-                <input type="password"/>
-            </form>
-        </div>
-
-    )
-}
-const HomeCreateAccount = ()=>{
-    return(
-        <div>
-            <h3>debilu</h3>
-            <form>
-                <label>E-mail</label>
-                <input type="email"/>
-                <label>Hasło</label>
-                <input type="password"/>
-                <label>Powtórz hasło</label>
-                <input type="password"/>
-            </form>
-        </div>
-
-    )
-}
+import HomeLogin from "./HomeLogin";
+import HomeCreateAccount from "./HomeCreateAccount.";
+import HomeMainNavigation from "./HomeMainNavigation";
 const HomeStart =()=>{
     return(<>
         <div className="is-flex is-flex-direction-column home-header-text-buttons">
@@ -108,15 +79,14 @@ const HomeStart =()=>{
 const HomeHeader=()=>{
     return(
         <div className="columns no-margin mb-0 mt-0"
-             id="columns"
-        >
+             id="homeHeader"
 
+        >
             <div
                 className="home-header-banner column is-half"
                 id="home-banner"
                 style={{backgroundImage:`url(${HeaderBackground})`}}
             />
-
             <div className="column is-half is-flex is-flex-direction-column home-header-content"
                  id="home-banner-column"
             >
@@ -126,13 +96,7 @@ const HomeHeader=()=>{
                             <Link  to="/logowanie"><p className="home-header-nav-bar-element">Zaloguj</p></Link>
                             <Link  to="/rejestracja"><p className="home-header-nav-bar-element">Załóż konto</p></Link>
                         </div>
-                        <ul className="is-flex home-header-nav-menu">
-                            <li className="home-header-nav-menu-element">Start</li>
-                            <li className="home-header-nav-menu-element">O co chodzi?</li>
-                            <li className="home-header-nav-menu-element">O nas</li>
-                            <li className="home-header-nav-menu-element">Fundacja i organizacje</li>
-                            <li className="home-header-nav-menu-element">Kontakt</li>
-                        </ul>
+                        <HomeMainNavigation/>
                     </div>
                     <Switch>
                         <Route exact path="/logowanie">
@@ -146,13 +110,8 @@ const HomeHeader=()=>{
                         </Route>
                     </Switch>
                 </Router>
-
-
-
-
             </div>
         </div>
-
     )
 }
 export default HomeHeader;

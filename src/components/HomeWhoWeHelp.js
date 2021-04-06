@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{useState} from 'react';
 import {BrowserRouter as Router, Link, Route, Switch} from "react-router-dom";
 import StyledHeader from "./elements/StyledHeader";
 
@@ -106,34 +106,55 @@ const Local = ()=>{
         </div>
     )
 }
-const HomeWhoWeHelp = () => {
+const HomeWhoWeHelp=()=> {
+    const [foundations, setFoundations] = useState([]);
+    const [organizations, setOrganizations] = useState([]);
+    const [local, setLocal] = useState([]);
+
+    function showFoundations(){
+        setFoundations([<Foundations/>]);
+        setOrganizations([])
+        setLocal([])
+    }
+    function showOrganizations(){
+        setFoundations([]);
+        setOrganizations([<Organizations/>])
+        setLocal([])
+    }
+    function showLocal(){
+        setFoundations([]);
+        setOrganizations([])
+        setLocal([<Local/>])
+    }
+
+
+
     return (<>
-        <Router>
-        <div className="container home-who-we-help">
+
+        <div id="homeWhoWeHelp" className="container home-who-we-help">
             <div className="is-one-third">
                 <StyledHeader nameFirstHalf="Komu pomagamy?" nameSecondHalf=""/>
                 <div className="home-who-we-help-buttons-box">
-                    <Link to="/"><button className="home-who-we-help-button">Fundacjom</button></Link>
-                    <Link to="/organizations"><button className="home-who-we-help-button">Organizacjom<br/>pozarządowym</button></Link>
-                    <Link to="/local"><button className="home-who-we-help-button">Lokalnym<br/>zbiórkom</button></Link>
+                    <button className="home-who-we-help-button"
+                            onClick={()=> showFoundations()}
+                    >Fundacjom</button>
+                    <button className="home-who-we-help-button"
+                            onClick={()=>showOrganizations()}
+                    >Organizacjom<br/>pozarządowym</button>
+                    <button className="home-who-we-help-button"
+                            onClick={()=>showLocal()}
+                    >Lokalnym<br/>zbiórkom</button>
                 </div>
                 <div>
-                    <Switch>
-                        <Route exact path="/">
-                    <Foundations/>
-                        </Route>
-                        <Route exact path="/organizations">
-                    <Organizations/>
-                        </Route>
-                        <Route exact path="/local">
-                    <Local/>
-                        </Route>
-                    </Switch>
+                    {foundations}
+                    {organizations}
+                    {local}
                 </div>
             </div>
         </div>
-        </Router>
+
         </>
     );
+
 };
 export default HomeWhoWeHelp;

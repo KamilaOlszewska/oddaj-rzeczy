@@ -5,17 +5,19 @@ import HomeSimpleSteps from "./HomeSimpleSteps";
 import HomeAboutUs from "./HomeAboutUs";
 import HomeWhoWeHelp from "./HomeWhoWeHelp";
 import HomeContact from "./HomeContact";
+import Logged from "./Logged";
 
 
 const Home = () => {
     return (
-        <div>
+        <div className="mb-0 pb-0">
             <HomeHeader/>
             <HomeThreeColumns/>
             <HomeSimpleSteps/>
             <HomeAboutUs/>
             <HomeWhoWeHelp/>
             <HomeContact/>
+            {/*<Logged/>*/}
         </div>
     );
 };

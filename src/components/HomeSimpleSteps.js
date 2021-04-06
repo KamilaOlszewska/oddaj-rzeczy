@@ -20,7 +20,7 @@ const SimpleStep = (props)=>{
 }
 const HomeSimpleSteps = () => {
     return (
-        <div>
+        <div id="homeSimpleSteps">
             <StyledHeader nameFirstHalf="Wystarczą 4 proste kroki" nameSecondHalf=""/>
             <div className="home-simple-steps-grey-section is-flex is-justify-content-center">
                 <div className="container columns">

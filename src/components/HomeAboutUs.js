@@ -3,7 +3,7 @@ import Decoration from "../assets/Decoration.svg"
 
 const HomeAboutUs = () => {
     return (
-        <div className="columns">
+        <div className="columns" id="homeAboutUs">
             <div className="column is-half home-about-us-section">
                 <div className="home-about-us-section-box">
                     <h4 className="home-about-us-section-box-header">O nas</h4>

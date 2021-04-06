@@ -15,7 +15,8 @@ const HomeColumn = (props)=>{
 }
 const HomeThreeColumns = () => {
     return (
-        <div className="three-columns-background is-flex is-justify-content-center">
+        <div className="three-columns-background is-flex is-justify-content-center"
+             id="homeThreeColumns">
         <div className="three-columns-container container is-flex is-justify-content-space-around has-text-centered columns">
             <HomeColumn number="10" title="Oddanych worków"/>
             <HomeColumn number="5" title="Wspartych organizacji"/>
