@@ -1,7 +1,6 @@
-import React from 'react';
-import BackgroundImage from "../assets/BackgroundImage@2x.png";
-import StyledHeader from "./elements/StyledHeader";
-import DemoForm from "./elements/ValidateEmail";
+import React from "react";
+import BackgroundImage from "../../assets/BackgroundImage@2x.png";
+import StyledHeader from "../elements/StyledHeader";
 
 class HomeContact extends React.Component {
     constructor() {
@@ -10,7 +9,6 @@ class HomeContact extends React.Component {
             input: {},
             errors: {}
         };
-
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
     }
@@ -18,15 +16,12 @@ class HomeContact extends React.Component {
     handleChange(event) {
         let input = this.state.input;
         input[event.target.name] = event.target.value;
-
         this.setState({
             input
         });
     }
-
     handleSubmit(event) {
         event.preventDefault();
-
         if (this.validate()) {
             console.log(this.state);
 
@@ -88,7 +83,8 @@ class HomeContact extends React.Component {
                 >
                     <div className="column is-half empty-column mb-0 is-marginless is-paddingless"></div>
                     <div className="column is-half home-contact-form-box mb-0">
-                        <StyledHeader nameFirstHalf="Skontaktuj się z nami" nameSecondHalf=""/>
+                        <StyledHeader nameFirstHalf="Skontaktuj się z nami"
+                                      nameSecondHalf=""/>
                         <form onSubmit={this.handleSubmit}>
                             <div className="is-flex is-justify-content-space-between">
                                 <div className="is-flex is-flex-direction-column form-group">
@@ -105,7 +101,10 @@ class HomeContact extends React.Component {
                                     <div className="text-danger">{this.state.errors.name}</div>
                                 </div>
                                 <div className="is-flex is-flex-direction-column form-group">
-                                    <label for="email" className="home-login-form-label">Wpisz swój email</label>
+                                    <label for="email"
+                                           className="home-login-form-label">
+                                        Wpisz swój email
+                                    </label>
                                     <input
                                         placeholder="abc@xyz.pl"
                                         className="home-login-form-input"
@@ -119,9 +118,15 @@ class HomeContact extends React.Component {
                                 </div>
                             </div>
                             <div className="is-flex is-flex-direction-column form-group">
-                                <label for="comment" className="home-login-form-label">Wpisz swoją wiadomość</label>
+                                <label for="comment"
+                                       className="home-login-form-label">
+                                    Wpisz swoją wiadomość
+                                </label>
                                 <textarea className="home-login-form-input home-contact-message"
-                                          placeholder="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+                                          placeholder="Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                                           sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                           Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
+                                           ut aliquip ex ea commodo consequat."
                                           name="comment"
                                           value={this.state.input.comment}
                                           onChange={this.handleChange}
@@ -140,7 +145,8 @@ class HomeContact extends React.Component {
                 </div>
                 <div className=" columns home-footer is-marginless is-paddingless">
                     <div
-                        className="level is-paddingless column is-flex is-justify-content-space-between home-footer-box is-align-content-flex-end is-marginless">
+                        className="level is-paddingless column is-flex is-justify-content-space-between home-footer-box
+                        is-align-content-flex-end is-marginless">
                         <h1 className="is-paddingless is-marginless">.</h1>
                         <p className="is-paddingless is-marginless">Copyright by CodersLab</p>
                         <h1 className="is-paddingless is-marginless">

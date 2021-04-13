@@ -1,27 +1,17 @@
-import React,{useContext} from 'react';
-import {FormContext} from "./FormsContext";
-
-
 const LoggedForm2 = () => {
-    // const [formsData, setFormsData] = useContext(FormContext);
 
-    // const handleChange = (e) => {
-    //     const value = e.target.value;
-    //     const name = e.target.name;
-    //     setFormsData(prev => {
-    //             return {
-    //                 ...prev,
-    //                 [name]: value
-    //             }
-    //         }
-    //     )
-    // }
     return (
-        <div>
-            <h3 className="step-number">Krok 2/4</h3>
-            <h2 className="step-title">Podaj liczbę 60l worków, w które spakowałeś/aś rzeczy:</h2>
+        <div className="columns">
+            <div className="column is-flex is-two-thirds is-flex-direction-column is-justify-content-flex-start">
+
+            <h3 className="steps-counter">Krok 2/4</h3>
+            <h2 className="logged-form-steps-header">
+                Podaj liczbę 60l worków, w które spakowałeś/aś rzeczy:
+            </h2>
             <div>
-                <label htmlFor="noOfBags">Liczba 60l worków:</label>
+                <label className="logged-form-2-label" htmlFor="noOfBags">
+                    Liczba 60l worków:
+                </label>
 
                 <select className="select-css" name="noOfBags"
                         // value={formsData.noOfBags} onChange={handleChange}
@@ -34,6 +24,8 @@ const LoggedForm2 = () => {
                     <option value="5">5</option>
                 </select>
             </div>
+            </div>
+            <div className="column"></div>
         </div>
     );
 };

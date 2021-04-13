@@ -1,25 +1,10 @@
-import React,{useContext} from 'react';
-import {FormContext} from "./FormsContext";
-
 const LoggedForm3 = () => {
-    // const [formsData, setFormsData] = useContext(FormContext);
-    //
-    // const handleChange = (e) => {
-    //     const value = e.target.value;
-    //     const name = e.target.name;
-    //     setFormsData(prev => {
-    //             return {
-    //                 ...prev,
-    //                 [name]: value
-    //             }
-    //         }
-    //     )
-    // }
     return (
-        <div>
-            <h3 className="step-number">Krok 3/4</h3>
+        <div className="columns">
+            <div className="column">
+            <h3 className="steps-counter">Krok 3/4</h3>
 
-            <label className="step-title">Lokalizacja:</label>
+            <label className="logged-form-steps-header">Lokalizacja:</label>
             <div>
                 <select className="select-css" name="localization"
                         // value={formsData.localization}
@@ -84,6 +69,8 @@ const LoggedForm3 = () => {
                    // value={formsData.customOrganization}
                    // onChange={handleChange}
             />
+        </div>
+            <div className="column"></div>
         </div>
     );
 };

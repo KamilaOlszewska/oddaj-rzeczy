@@ -1,7 +1,6 @@
 .logged-form-section{
   height: 100vh;
-  justify-content: center;
-  display: flex;
+  text-align: left;
 }
 .logged-form-option{
   margin: 2rem 0;
@@ -37,4 +36,12 @@
   padding-top: 2.5rem;
   font-size: 1.3rem;
   font-weight: 300;
+}
+.logged-form-2-label{
+  font-size: 1.5rem;
+  margin-right: 1rem;
+}
+.select-css{
+  background-color: transparent;
+  padding: 0.2rem 0.5rem;
 }

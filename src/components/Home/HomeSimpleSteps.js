@@ -1,27 +1,32 @@
-import React from 'react';
-import Decoration from "../assets/Decoration.svg"
-import ShirtIcon from "../assets/Icon-1@2x.png"
-import BagIcon from "../assets/Icon-2@2x.png"
-import SearchIcon from "../assets/Icon-3@2x.png"
-import ReuseIcon from "../assets/Icon-4@2x.png"
-import UppercaseButton from "./elements/UppercaseButton";
-import StyledHeader from "./elements/StyledHeader";
+import ShirtIcon from "../../assets/Icon-1@2x.png"
+import BagIcon from "../../assets/Icon-2@2x.png"
+import SearchIcon from "../../assets/Icon-3@2x.png"
+import ReuseIcon from "../../assets/Icon-4@2x.png"
+import UppercaseButton from "../elements/UppercaseButton";
+import StyledHeader from "../elements/StyledHeader";
+import {Link} from "react-router-dom";
 
 
 const SimpleStep = (props)=>{
     return(
         <div className="column home-simple-steps-box">
         <img className="home-simple-steps-box-icon" src={props.image}/>
-        <h4 className="home-simple-steps-box-header">{props.titleFirstPart}<br/>{props.titleSecondPart}</h4>
+        <h4 className="home-simple-steps-box-header">
+            {props.titleFirstPart}<br/>{props.titleSecondPart}
+        </h4>
         <span className="separator"></span>
-        <p className="home-simple-steps-box-text">{props.paragraphFirstPart}<br/>{props.paragraphSecondPart}</p>
+        <p className="home-simple-steps-box-text">
+            {props.paragraphFirstPart}<br/>{props.paragraphSecondPart}
+        </p>
         </div>
     )
 }
 const HomeSimpleSteps = () => {
     return (
         <div id="homeSimpleSteps">
-            <StyledHeader nameFirstHalf="Wystarczą 4 proste kroki" nameSecondHalf=""/>
+            <StyledHeader
+                nameFirstHalf="Wystarczą 4 proste kroki"
+                nameSecondHalf=""/>
             <div className="home-simple-steps-grey-section is-flex is-justify-content-center">
                 <div className="container columns">
                     <SimpleStep
@@ -51,7 +56,12 @@ const HomeSimpleSteps = () => {
                 </div>
             </div>
             <div className="home-simple-steps-button-container">
-                <UppercaseButton class="home-simple-steps-button" nameFirstPart="Oddaj" nameSecondPart="rzeczy"/>
+                <Link  to="/logowanie">
+                    <UppercaseButton
+                        class="home-simple-steps-button"
+                        nameFirstPart="Oddaj"
+                        nameSecondPart="rzeczy"/>
+                </Link>
             </div>
         </div>
     );

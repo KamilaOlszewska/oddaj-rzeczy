@@ -1,4 +1,4 @@
-import React,{useContext,useState} from 'react';
+import {useState} from 'react';
 import BackgroundForm from "../assets/Background-Form.jpeg"
 import LoggedForm1 from "./LoggedForm1";
 import LoggedForm2 from "./LoggedForm2";
@@ -6,8 +6,6 @@ import LoggedForm3 from "./LoggedForm3";
 import LoggedForm4 from "./LoggedForm4";
 import LoggedThanksMessage from "./LoggedThanksMessage";
 import LoggedSummary from "./LoggedSummary";
-import {FormContext} from "./FormsContext";
-import {validateForm} from "./validateForm";
 
 const LoggedForm = () => {
     const [currentPage, setCurrentPage] = useState(1);
@@ -39,10 +37,10 @@ const LoggedForm = () => {
         // setCurrentPage(prev => prev + 1)
     }
     return (
-        <section className="survey-form">
+        <section className="logged-form-section" style={{backgroundImage: `url(${BackgroundForm})`, height: "100vh"}}>
             <div className="container">
                 <div className="survey-form__wrapper">
-                    <div className="form-inputs">
+                    <div className="form-inputs" >
                         {
                             getCurrentForm()
                         }
@@ -50,14 +48,27 @@ const LoggedForm = () => {
                     <div className="form-navigation">
                         {
                             ![1, 6].includes(currentPage) &&
-                            <button className="form-navigation__button btn" onClick={() => setCurrentPage(prev => prev - 1)}>Wstecz</button>
+                            <button
+                                className="home-login-form-button-bordered mr-2"
+                                    onClick={() => setCurrentPage(prev => prev - 1)}>
+                                Wstecz
+                            </button>
                         }
                         {
-                            ![5, 6].includes(currentPage) && <button className="form-navigation__button btn" onClick={handleNextClick}>Dalej</button>
+                            ![5, 6].includes(currentPage) &&
+                            <button
+                                className="home-login-form-button-bordered mr-2"
+                                onClick={handleNextClick}>
+                                Dalej
+                            </button>
                         }
                         {
                             [5].includes(currentPage) &&
-                            <button className="form-navigation__button btn" onClick={() => setCurrentPage(prev => prev + 1)}>Potwierdzam</button>
+                            <button
+                                className="home-login-form-button-bordered mr-2"
+                                onClick={() => setCurrentPage(prev => prev + 1)}>
+                                Potwierdzam
+                            </button>
                         }
                     </div>
                 </div>
